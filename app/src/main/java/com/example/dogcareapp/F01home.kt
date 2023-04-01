@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class F04_calendar : Fragment() {
+class F01home : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -16,7 +16,7 @@ class F04_calendar : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_f04_calendar, container, false)
+        return inflater.inflate(R.layout.f01home, container, false)
     }
 
 }

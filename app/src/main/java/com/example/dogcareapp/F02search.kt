@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class F02_search : Fragment() {
+class F02search : Fragment() {
     private lateinit var allergyRv: RecyclerView
     private lateinit var allergyRvAdapter: AllergyRvAdapter
     private lateinit var allergies: ArrayList<Allergy>
@@ -26,7 +26,7 @@ class F02_search : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_f02_search, container, false)
+        val view = inflater.inflate(R.layout.f02search, container, false)
         allergyRv = view.findViewById(R.id.allergy_rv)
         search_view_allergy = view.findViewById(R.id.search_view_allergy)
         search_view_allergy.setOnQueryTextListener(searchViewTextListener)

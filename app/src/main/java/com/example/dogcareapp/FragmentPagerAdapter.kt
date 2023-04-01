@@ -7,7 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 class FragmentPagerAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter(fragmentActivity) {
 
     // 뷰페이저2에 연결할 프래크먼트를 리스트로 생로
-    val fragmentList = listOf<Fragment>(F01_home(), F02_search(), F03_alarm(), F04_calendar())
+    val fragmentList = listOf<Fragment>(F01home(), F02search(), F03alarm(), F04calendar())
 
     // 뷰페이저2에 노출시킬 프래그먼트 갯수 설정
     override fun getItemCount(): Int {
