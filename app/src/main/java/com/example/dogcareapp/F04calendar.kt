@@ -63,7 +63,6 @@ class F04calendar : Fragment(){
     }
 
     fun check_schedule(cYear: Int, cMonth: Int, cDay: Int) {
-        //저장할 파일 이름설정
         fileName = "" + cYear + "-" + (cMonth + 1) + "" + "-" + cDay + ".txt"
 
         try {
