@@ -29,7 +29,6 @@ class F03alarm : Fragment() {
     lateinit var addButton: Button
     lateinit var db: MedicationDB
     lateinit var inputLayout: LinearLayout
-
     var gId: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,12 +44,12 @@ class F03alarm : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.f03alarm, container, false)
-        inputLayout = view.findViewById(R.id.input_section)
-        medicationText = view.findViewById(R.id.medication_text)
-        addButton = view.findViewById(R.id.add_button)
+        inputLayout = view.findViewById(R.id.section_input)
+        medicationText = view.findViewById(R.id.editText_medication)
+        addButton = view.findViewById(R.id.button_add)
         fab = view.findViewById(R.id.fab)
 
-        recyclerView = view.findViewById(R.id.medication_rv)
+        recyclerView = view.findViewById(R.id.recyclerView_medication)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
 

@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 
-class AllergyRvAdapter (var allergies: ArrayList<Allergy>, var con: Context) : RecyclerView.Adapter<AllergyRvAdapter.ViewHolder>(), Filterable {
+class AllergyRecyclerviewAdapter (var allergies: ArrayList<Allergy>, var con: Context) : RecyclerView.Adapter<AllergyRecyclerviewAdapter.ViewHolder>(), Filterable {
     var filteredAllergies = ArrayList<Allergy>()
     var itemFilter = ItemFilter()
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -18,7 +18,7 @@ class AllergyRvAdapter (var allergies: ArrayList<Allergy>, var con: Context) : R
         var rate_item_txtView: TextView
 
         init{
-            image_item_imgView = itemView.findViewById(R.id.rating_img)
+            image_item_imgView = itemView.findViewById(R.id.img_rating)
             name_item_txtView = itemView.findViewById(R.id.allergy_name)
             rate_item_txtView = itemView.findViewById(R.id.allergy_rating)
 

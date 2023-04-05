@@ -20,7 +20,7 @@
         android:layout_marginStart="8dp">
 
         <ImageView
-            android:id="@+id/rating_img"
+            android:id="@+id/img_rating"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginBottom="4dp"
@@ -40,7 +40,7 @@
             android:layout_marginTop="4dp"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/rating_img"
+            app:layout_constraintStart_toEndOf="@+id/img_rating"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="foodName"/>
 
@@ -55,4 +55,5 @@
             tools:text="ratingLevel" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

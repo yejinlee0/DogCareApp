@@ -10,15 +10,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class F02search : Fragment() {
-    private lateinit var allergyRv: RecyclerView
-    private lateinit var allergyRvAdapter: AllergyRvAdapter
+    private lateinit var allergyRecyclerview: RecyclerView
+    private lateinit var allergyRecyclerviewAdapter: AllergyRecyclerviewAdapter
     private lateinit var allergies: ArrayList<Allergy>
-    private lateinit var search_view_allergy: SearchView
+    private lateinit var searchView_allergy: SearchView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         allergies = tempAllergies()
-        allergyRvAdapter = AllergyRvAdapter(allergies, requireContext())
+        allergyRecyclerviewAdapter = AllergyRecyclerviewAdapter(allergies, requireContext())
 
     }
 
@@ -27,16 +27,16 @@ class F02search : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.f02search, container, false)
-        allergyRv = view.findViewById(R.id.allergy_rv)
-        search_view_allergy = view.findViewById(R.id.search_view_allergy)
-        search_view_allergy.setOnQueryTextListener(searchViewTextListener)
+        allergyRecyclerview = view.findViewById(R.id.recyclerView_allergy)
+        searchView_allergy = view.findViewById(R.id.searchView_allergy)
+        searchView_allergy.setOnQueryTextListener(searchViewTextListener)
         setAdapter()
         return view
     }
 
     private fun setAdapter() {
-        allergyRv.layoutManager = LinearLayoutManager(requireContext())
-        allergyRv.adapter = allergyRvAdapter
+        allergyRecyclerview.layoutManager = LinearLayoutManager(requireContext())
+        allergyRecyclerview.adapter = allergyRecyclerviewAdapter
     }
 
     private fun tempAllergies(): ArrayList<Allergy>{
@@ -64,7 +64,7 @@ class F02search : Fragment() {
         }
 
         override fun onQueryTextChange(newText: String?): Boolean {
-            allergyRvAdapter.filter.filter(newText)
+            allergyRecyclerviewAdapter.filter.filter(newText)
             return false
         }
     }

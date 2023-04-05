@@ -16,7 +16,7 @@ class MedicationAdapter(): RecyclerView.Adapter<MedicationAdapter.ViewHolder>() 
     var medicationList: ArrayList<Medication> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater: LayoutInflater = LayoutInflater.from(parent.context)
-        val view: View = inflater.inflate(R.layout.medication_item, parent, false)
+        val view: View = inflater.inflate(R.layout.item_medication, parent, false)
         return ViewHolder(view)
     }
 

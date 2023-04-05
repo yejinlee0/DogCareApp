@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // ViewPager2, TabLayout 참조
-        val viewPager2:ViewPager2 = findViewById(R.id.viewpager2)
-        val tableLayout:TabLayout = findViewById(R.id.tablayout)
+        val viewPager2:ViewPager2 = findViewById(R.id.viewPager2)
+        val tableLayout:TabLayout = findViewById(R.id.tabLayout)
 
         // FragmentPagerAdapter 생성
         val fragmentPagerAdapter = FragmentPagerAdapter(this)

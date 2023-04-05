@@ -6,19 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".F02search"
-    android:orientation="vertical">
+    android:orientation="vertical" >
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_view_allergy"
+        android:id="@+id/searchView_allergy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:iconifiedByDefault="false"/>
+        android:iconifiedByDefault="false" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/allergy_rv"
+        android:id="@+id/recyclerView_allergy"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
